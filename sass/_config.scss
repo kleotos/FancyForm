@@ -1,2 +1,27 @@
-$primary-color: #428bca;
-$secondary-color: #fff;
+$primary: #428bca;
+$secondary: #fff;
+$tertiary:   lighten($primary, 30%);
+$light: #9e9e9e;
+$progress-height: 10px;
+$error: #ff2d26;
+
+
+@mixin transition-ease {
+    transition: 0.8s ease-in-out;
+}
+
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+      @return #000;
+    }@else {
+      @return #fff;
+    }
+  }
+
+
+  @media (max-width: 600px) {
+      #form-box {
+          width: 80%;
+      }
+  }
